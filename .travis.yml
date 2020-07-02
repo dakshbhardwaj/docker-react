@@ -7,4 +7,4 @@ before install:
   - docker build -t dakshbhardwaj/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run dakshbhardwaj/docker-react npm run test -- --coverage
+  - docker run -e CI=true dakshbhardwaj/docker-react npm run test -- --coverage
